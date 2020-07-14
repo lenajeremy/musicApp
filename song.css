@@ -1,0 +1,83 @@
+.library{
+  height: calc(100vh - 110px);
+  position: relative;
+  margin-top: 15px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  text-align: justify;
+  background-color:rgba(63, 38, 204, 0.5);
+}
+.libraryHeader{
+  position: sticky;
+  width: inherit;
+  padding-top: 15px;
+  height: 50px;
+  display: flex;
+  font-size: 25px;
+  justify-content: space-between;
+  top: 0;
+  margin: auto;
+}
+.songArea{
+    background: url('assets/images/images\ \(11\).jpeg') center bottom;
+  background-attachment: fixed;
+  margin-top: 15px;
+  height: calc(100vh - 200px);
+  overflow: scroll;
+}
+.libraryHeader .shuffleXplay{
+  display: flex;
+  font-size: 15px;
+}
+.shuffleXplay .shuffle, .play{
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+body{
+  overflow: hidden;
+  background: linear-gradient(to right, purple, pink)
+}
+.song{
+  padding: 5px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.603);
+}
+.song .pause{
+  position: absolute;
+  right: -10px;
+  font-size: 10px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: gray;
+  color: white;
+}
+.song:not(.active) .pause{
+  display: none;
+}
+.song.active{
+  background: white;
+  color: black;
+}
+.song .container{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.thumbnail{
+  margin-right: 20px;
+}
+.thumbnail img{
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+}

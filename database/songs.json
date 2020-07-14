@@ -1,0 +1,108 @@
+{
+  "songs": [
+    {
+      "index": 1,
+      "title": "Ariana Grande - no tears left to cry(Official Video).mp3",
+      "singer": [
+        "Ariana Grande"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/images (11).jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Ariana Grande - no tears left to cry (Official Video).mp3"
+    },
+    {
+      "index": 2,
+      "title": "Ariana Grande - raindrops (an angel cried) (Audio).mp3",
+      "singer": [
+        "Ariana Grande"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/2.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Ariana Grande - raindrops (an angel cried) (Audio).mp3"
+    },
+    {
+      "index": 3,
+      "title": "Ariana Grande, Justin Bieber - Stuck with U.mp3",
+      "singer": [
+        "Ariana Grande",
+        "Justin Bieber"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/3.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Ariana Grande, Justin Bieber - Stuck with U.mp3"
+    },
+    {
+      "index": 4,
+      "title": "August Alsina - No Love ft. Nicki Minaj (Official Video).mp3",
+      "singer": [
+        "August Alsina",
+        "Nicki Minaj"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/4.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/August Alsina - No Love ft. Nicki Minaj (Official Video).mp3"
+    },
+    {
+      "index": 5,
+      "title": "Burna Boy - Attention ft. Nicki Minaj (Official Video).mp3",
+      "singer": [
+        "Burna Boy",
+        "Nicki Minaj"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/5.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Burna Boy - Attention ft. Nicki Minaj (Official Video).mp3"
+    },
+    {
+      "index": 6,
+      "title": "Chike_-_Beautiful_People_illuminaija.com.mp3",
+      "singer": [
+        "Chike"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/6.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Chike_-_Beautiful_People_illuminaija.com.mp3"
+    },
+    {
+      "index": 7,
+      "title": "Chike-Ft-Ric-Hassani-Nakupenda-01.mp3",
+      "singer": [
+        "Chike",
+        "Ric Hassani"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/7.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Chike-Ft-Ric-Hassani-Nakupenda-01.mp3"
+    },
+    {
+      "index": 8,
+      "title": "Chike-Ft-Zoro-Watching-over-Me.mp3",
+      "singer": [
+        "Chike",
+        "Zoro"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/8.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Chike-Ft-Zoro-Watching-over-Me.mp3"
+    },
+    {
+      "index": 9,
+      "title": "Chike-If-You-No-Love.mp3",
+      "singer": [
+        "Chike"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/9.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Chike-If-You-No-Love.mp3"
+    }
+  ]
+}
