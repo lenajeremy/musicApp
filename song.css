@@ -5,7 +5,8 @@
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   text-align: justify;
-  background-color:rgba(63, 38, 204, 0.5);
+  background-color:rgb(41, 37, 37);
+  border:3px solid gainsboro;
 }
 .libraryHeader{
   position: sticky;
@@ -19,7 +20,7 @@
   margin: auto;
 }
 .songArea{
-    background: url('assets/images/images\ \(11\).jpeg') center bottom;
+ background: url('assets/images/images\ \(11\).jpeg') center bottom;
   background-attachment: fixed;
   margin-top: 15px;
   height: calc(100vh - 200px);
@@ -38,15 +39,18 @@
   justify-content: center;
   border-radius: 50%;
   margin-left: 10px;
+  color: black;
 }
 body{
   overflow: hidden;
-  background: linear-gradient(to right, purple, pink)
+  background: gray;
+  color: white;
 }
 .song{
-  padding: 5px;
-  height: 64px;
-  background: rgba(255, 255, 255, 0.603);
+  height: 70px;
+  background: rgba(0, 0, 0, 0.73);
+  padding: 10px 0;
+  font-size: 100%;
 }
 .song .pause{
   position: absolute;
@@ -58,20 +62,24 @@ body{
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: gray;
-  color: white;
+  bottom: 0px;
+  background: white;
+  color: rgb(253, 173, 0);
 }
 .song:not(.active) .pause{
   display: none;
 }
 .song.active{
-  background: white;
   color: black;
+  background: rgb(253, 173, 0);
 }
 .song .container{
   position: relative;
   display: flex;
   align-items: center;
+}
+.song .songTitle{
+  font-weight: 500;
 }
 .thumbnail{
   margin-right: 20px;
