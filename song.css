@@ -43,12 +43,12 @@
 }
 body{
   overflow: hidden;
-  background: gray;
+  background: rgb(29, 28, 28);
   color: white;
 }
 .song{
   height: 70px;
-  background: rgba(0, 0, 0, 0.73);
+  background: rgba(0, 0, 0, 0.9);
   padding: 10px 0;
   font-size: 100%;
 }
@@ -64,14 +64,14 @@ body{
   border-radius: 50%;
   bottom: 0px;
   background: white;
-  color: rgb(253, 173, 0);
+  color: rgb(235, 117, 8);
 }
 .song:not(.active) .pause{
   display: none;
 }
 .song.active{
   color: black;
-  background: rgb(253, 173, 0);
+  background: rgb(235, 117, 8);
 }
 .song .container{
   position: relative;

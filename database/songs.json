@@ -103,6 +103,56 @@
       "thumbnail": "assets/images/9.jpeg",
       "extension": "mp3",
       "src": "assets/songs/Chike-If-You-No-Love.mp3"
+    },
+    {
+      "index": 10,
+      "title": "Chike-Insecure.mp3",
+      "singer": [
+        "Chike"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/images (11).jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Chike-Insecure.mp3"
+    },
+    {
+      "index": 11,
+      "title": "Chike-Roju.mp3",
+      "singer":["Chike"],
+      "year": 2010,
+      "thumbnail":"assets/images/3.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Chike-Roju.mp3"
+    },
+    {
+      "index": 12,
+      "title": "Chike-Running.mp3",
+      "singer":["Chike"],
+      "year":2017,
+      "thumbnail":"assets/images/9.jpeg",
+      "extension": "mp3",
+      "src": "assets/songs/Chike-Running.mp3"
+    }, {
+      "index": 12,
+      "title":"Chris Brown - No Guidance (Official Video) ft. Drake.mp3",
+      "singer":["Chris Brown, Drake"],
+      "year":2017,
+      "thumbnail":"assets/images/9.jpeg",
+      "src":"assets/songs/Chris Brown - No Guidance (Official Video) ft. Drake.mp3"
+    }, {
+      "index": 13,
+      "title":"Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3",
+      "singer":["Cobhams Asuquo", "Simi"],
+      "year": 2010,
+      "thumbnail":"assets/images/5.jpeg",
+      "src":"assets/songs/Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3"
+    },{
+      "index":14,
+      "title": "Davido x Nicki minaj - Freak of the week(official music video).mp3",
+      "singer": ["Davido", "Nicki Minaj"],
+      "year": 2020,
+      "thumbnail":"assets/images/3.jpeg",
+      "src":"assets/songs/Davido x Nicki minaj - Freak of the week(official music video).mp3"
     }
   ]
 }
