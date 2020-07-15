@@ -18,6 +18,7 @@
   justify-content: space-between;
   top: 0;
   margin: auto;
+  align-items: center;
 }
 .songArea{
  background: url('assets/images/images\ \(11\).jpeg') center bottom;
@@ -30,6 +31,22 @@
   display: flex;
   font-size: 15px;
 }
+.libraryHeader .sortBtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sortBtn svg:nth-of-type(2){
+  position: absolute;
+  bottom: 0%;
+}
+.sortBtn.asc .fa-sort-up{
+  color: gray;
+}
+.sortBtn.desc .fa-sort-down{
+  color: gray;
+}
+
 .shuffleXplay .shuffle, .play{
   background-color: white;
   width: 30px;
@@ -64,14 +81,14 @@ body{
   border-radius: 50%;
   bottom: 0px;
   background: white;
-  color: rgb(235, 117, 8);
+  color: rgb(3, 203, 253);
 }
 .song:not(.active) .pause{
   display: none;
 }
 .song.active{
   color: black;
-  background: rgb(235, 117, 8);
+  background: rgb(3, 203, 253);
 }
 .song .container{
   position: relative;

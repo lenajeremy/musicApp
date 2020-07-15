@@ -24,7 +24,6 @@ menuBarBtn.addEventListener('click', () => {
       array.push(e.touches[0].clientX);
 
       function touchUpHandler(e) {
-        console.log(array)
         menuContent.removeEventListener('touchmove', doSomeStuff);
         if (array[array.length - 1] - array[0] < 0) {
           handleDirection('left');
@@ -37,7 +36,6 @@ menuBarBtn.addEventListener('click', () => {
 })
 
 function handleDirection(direction) {
-  console.log('handle direction')
   if (direction == 'left') {
     menuContent.style.transform = 'translateX(-100%)';
   }
@@ -70,7 +68,18 @@ function songCreator(object) {
   songTitle.textContent = object.title;
   const small = document.createElement('small');
   const singer = document.createElement('p');
-  singer.textContent = object.singer.length === 1 ? object.singer[0] : `${object.singer[0]} Ft ${object.singer[1]}`;
+  singer.textContent = singers(object.singer);
+
+  function singers(singers) {
+    let string = '';
+    for (let singer of singers) {
+      if (singer == singers[singers.length - 1]) {
+        string += singer;
+      } else string += singer + ' Ft ';
+    }
+    return string;
+  }
+
   singer.className = 'singer';
   const audio = document.createElement('audio');
   const pause = document.createElement('div');
@@ -95,7 +104,7 @@ function songCreator(object) {
 fetch('database/songs.json')
   .then(result => result.json().then(doStuffWithData))
   .catch((err) => {
-    console.error(error)
+    console.error(err)
   });
 
 function makeActive(object) {
@@ -105,23 +114,56 @@ function makeActive(object) {
     object.classList.add('active');
   }
 }
-
 // Song playing Functionality
 
 function doStuffWithData(data) {
   const {
     songs
   } = data;
-  for (let song of songs) {
-    songCreator(song)
+  console.log('original songs:', songs)
+  function sortData(songs, value) {
+    if (value === 'toSortAsc') {
+      document.querySelectorAll('.song').forEach(song => song.remove())
+      for (let song of songs.sort((a, b) => a.index - b.index)) {
+        songCreator(song);
+      }
+      console.log('songs was sorted ascending')
+    } else {
+      document.querySelectorAll('.song').forEach(song => song.remove())
+      for (let song of songs.sort((a, b) => b.index - a.index)) {
+        songCreator(song);
+      }
+      console.log('songs was sorted descending')
+    }
+    howToSort();
   }
-  setSongFunctionality();
+  sortData(songs, 'toSortAsc')
+
+  function howToSort() {
+    const sortBtn = document.querySelector('.sortBtn');
+    sortBtn.addEventListener('click', function sortBtnFunct() {
+      sortBtn.removeEventListener('click', sortBtnFunct);
+      // console.log(`before ${sortBtn.classList}`);
+      if (sortBtn.classList.contains('asc')) {
+        sortBtn.classList.replace('asc', 'desc');
+        console.log('to sort Descending');
+        sortData(songs, 'toSortDesc');
+      } else {
+        sortBtn.classList.replace('desc', 'asc');
+        console.log('to sort asc');
+        sortData(songs, 'toSortAsc');
+      }
+      console.log(sortBtn.classList);
+      // console.log(`after ${sortBtn.classList}`);
+      setSongFunctionality();
+    })
+  }
+  setSongFunctionality()
 }
 
 function setSongFunctionality() {
   const songDiv = document.querySelectorAll('.song');
   songDiv.forEach(song => {
-    console.log(song)
     song.addEventListener('click', () => {
       stopActiveSongs()
       song.classList.toggle('active');
@@ -130,7 +172,7 @@ function setSongFunctionality() {
         .then(() => {
           loopFunctionality(audio);
         });
-    })
+    });
   });
 }
 
@@ -150,10 +192,7 @@ function pauseFunctionality(song) {
   const pauseBtn = song.querySelector('.pause')
   pauseBtn.addEventListener('click', function pauseHandler(e) {
     e.stopPropagation()
-    // pauseBtn.removeEventListener('click', pauseHandler);
-    console.log('pause button')
     const audio = song.querySelector('audio');
-    console.log(audio.paused, 'before')
     if (audio.paused) {
       audio.play();
       pauseBtn.querySelector('svg').classList.remove('fa-play');
@@ -163,7 +202,6 @@ function pauseFunctionality(song) {
       pauseBtn.querySelector('svg').classList.remove('fa-pause');
       pauseBtn.querySelector('svg').classList.add('fa-play');
     }
-    console.log(audio.paused, 'after')
   })
 }
 
@@ -171,7 +209,23 @@ function loopFunctionality(audio) {
   pauseFunctionality(audio.parentElement);
   const songDiv = document.querySelectorAll('.song');
   audio.addEventListener('ended', () => {
-    console.log('song has ended');
-  songDiv[Array.from(songDiv).indexOf(audio.parentElement.parentElement) + 1].click();
+    songDiv[Array.from(songDiv).indexOf(audio.parentElement.parentElement) + 1].click();
+  })
+}
+
+function generalPlayButton() {
+  const allSongs = document.querySelectorAll('.song');
+  const generalPlay = document.querySelector('.play');
+  const isInPlay = document.querySelector('.song.active');
+  generalPlay.addEventListener('click', function toBeNamedLater() {
+    const svg = generalPlay.querySelector('svg')
+    if (svg.classList.contains('fa-play')) {
+      svg.classList.replace('fa-play', 'fa-pause');
+      if (!isInPlay) {
+        allSongs[3].click();
+      } else isInPlay.click();
+    } else {
+      svg.classList.replace('fa-pause', 'fa-play');
+    }
   })
 }

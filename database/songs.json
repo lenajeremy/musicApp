@@ -118,41 +118,155 @@
     {
       "index": 11,
       "title": "Chike-Roju.mp3",
-      "singer":["Chike"],
+      "singer": [
+        "Chike"
+      ],
       "year": 2010,
-      "thumbnail":"assets/images/3.jpeg",
+      "thumbnail": "assets/images/3.jpeg",
       "extension": "mp3",
       "src": "assets/songs/Chike-Roju.mp3"
     },
     {
       "index": 12,
       "title": "Chike-Running.mp3",
-      "singer":["Chike"],
-      "year":2017,
-      "thumbnail":"assets/images/9.jpeg",
+      "singer": [
+        "Chike"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/9.jpeg",
       "extension": "mp3",
       "src": "assets/songs/Chike-Running.mp3"
-    }, {
+    },
+    {
       "index": 12,
-      "title":"Chris Brown - No Guidance (Official Video) ft. Drake.mp3",
-      "singer":["Chris Brown, Drake"],
-      "year":2017,
-      "thumbnail":"assets/images/9.jpeg",
-      "src":"assets/songs/Chris Brown - No Guidance (Official Video) ft. Drake.mp3"
-    }, {
+      "title": "Chris Brown - No Guidance (Official Video) ft. Drake.mp3",
+      "singer": [
+        "Chris Brown",
+        "Drake"
+      ],
+      "year": 2017,
+      "thumbnail": "assets/images/9.jpeg",
+      "src": "assets/songs/Chris Brown - No Guidance (Official Video) ft. Drake.mp3"
+    },
+    {
       "index": 13,
-      "title":"Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3",
-      "singer":["Cobhams Asuquo", "Simi"],
+      "title": "Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3",
+      "singer": [
+        "Cobhams Asuquo",
+        "Simi"
+      ],
       "year": 2010,
-      "thumbnail":"assets/images/5.jpeg",
-      "src":"assets/songs/Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3"
-    },{
-      "index":14,
+      "thumbnail": "assets/images/5.jpeg",
+      "src": "assets/songs/Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3"
+    },
+    {
+      "index": 14,
       "title": "Davido x Nicki minaj - Freak of the week(official music video).mp3",
-      "singer": ["Davido", "Nicki Minaj"],
+      "singer": [
+        "Davido",
+        "Nicki Minaj"
+      ],
       "year": 2020,
-      "thumbnail":"assets/images/3.jpeg",
-      "src":"assets/songs/Davido x Nicki minaj - Freak of the week(official music video).mp3"
+      "thumbnail": "assets/images/3.jpeg",
+      "src": "assets/songs/Davido x Nicki minaj - Freak of the week(official music video).mp3"
+    },
+    {
+      "index": 15,
+      "title": "Dj-Neptune-Nobody-ft.-Joeboy-Mr-Eazi.mp3",
+      "singer": [
+        "DJ Neptune",
+        "Joeboy",
+        "Mr Eazi"
+      ],
+      "year": 2020,
+      "thumbnail": "assets/images/images (11).jpeg",
+      "src": "assets/songs/Dj-Neptune-Nobody-ft.-Joeboy-Mr-Eazi.mp3"
+    },
+    {
+      "index": 16,
+      "title": "Ed Sheeran - Photograph (Official Music Video).mp3",
+      "singer": [
+        "Ed Sheeran"
+      ],
+      "year": 2015,
+      "thumbnail": "assets/images/3.jpeg",
+      "src": "assets/songs/Ed Sheeran - Photograph (Official Music Video).mp3"
+    },
+    {
+      "index": 17,
+      "title": "Jerusalema-Remix-ft.-Burna-Boy-Nomcebo-Zikode",
+      "singer": [
+        "Burna Boy",
+        "Nomcebo",
+        "Zikode"
+      ],
+      "year": 2020,
+      "thumbnail": "assets/images/9.jpeg",
+      "src": "assets/songs/Jerusalema-Remix-ft.-Burna-Boy-Nomcebo-Zikode.mp3"
+    },
+    {
+      "index": 18,
+      "title": "Joeboy-Call-Official-Audio",
+      "singer": [
+        "Joeboy"
+      ],
+      "year": 2020,
+      "thumbnail": "assets/images/2.jpeg",
+      "src": "assets/songs/Joeboy-Call-Official-Audio.mp3"
+    },
+    {
+      "index": 19,
+      "title": "Jonathan-McReynolds-Make-Room-CEENAIJA.COM.mp3",
+      "singer": [
+        "Jonathan McReynolds"
+      ],
+      "year": 2019,
+      "thumbnail": "assets/images/5.jpeg",
+      "src": "assets/songs/Jonathan-McReynolds-Make-Room-CEENAIJA.COM_.mp3"
+    },
+    {
+      "index": 20,
+      "title": "Justin Bieber - Intentions ft. Quavo.mp3",
+      "singer": [
+        "Justin Bieber",
+        "Quavo"
+      ],
+      "year": 2019,
+      "thumbnail": "assets/images/images (11).jpeg",
+      "src": "assets/songs/Justin Bieber - Intentions ft. Quavo.mp3"
+    },
+    {
+      "index": 20,
+      "title": "Know-You-ft.-Simi.mp3",
+      "singer": [
+        "Ladipoe",
+        "Simi"
+      ],
+      "year": 2020,
+      "thumbnail": "assets/images/7.jpeg",
+      "src": "assets/songs/Know-You-ft.-Simi.mp3"
+    },
+    {
+      "index": 21,
+      "title": "L.A.X-Ft.-Simi-Tiwa-Savage-Gobe-Remix.mp3",
+      "singer": [
+        "L.A.X",
+        "Simi",
+        "Tiwa Savage"
+      ],
+      "year": 2020,
+      "thumbnail": "assets/images/6.jpeg",
+      "src": "assets/songs/L.A.X-Ft.-Simi-Tiwa-Savage-Gobe-Remix.mp3"
+    },
+    {
+      "index": 22,
+      "title": "Marvin-Sapp-Never-Would-Have-Made-It-GOSPELMINDS.mp3",
+      "singer": [
+        "Marvin Sapp"
+      ],
+      "year": 2020,
+      "thumbnail": "assets/images/7.jpeg",
+      "src": "assets/songs/Marvin-Sapp-Never-Would-Have-Made-It-GOSPELMINDS-.mp3"
     }
   ]
 }
