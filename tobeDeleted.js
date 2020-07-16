@@ -1,4 +1,5 @@
-const you = document.getElementById('syu');
-you.addEventListener('touchcancel', (e) => {
-  console.log(e.touches[0].clientX)
-})
+getUsefulString('Chike Ft Ric Hassani')
+function getUsefulString(string) {
+  string = string.split('').slice(0, string.indexOf('Ft')).join('').trim();
+  return(string, string.length)
+}

@@ -55,6 +55,7 @@ plusButton.addEventListener('click', () => {
 function songCreator(object) {
   const songDiv = document.createElement('div');
   songDiv.className = 'song'
+  songDiv.setAttribute('data-short', object.shortTitle);
   const container = document.createElement('div');
   container.className = 'container';
   const thumbnail = document.createElement('div');
@@ -104,7 +105,7 @@ function songCreator(object) {
 fetch('database/songs.json')
   .then(result => result.json().then(doStuffWithData))
   .catch((err) => {
-    console.error(err)
+    console.log(err)
   });
 
 function makeActive(object) {
@@ -120,20 +121,19 @@ function doStuffWithData(data) {
   const {
     songs
   } = data;
-  console.log('original songs:', songs)
+
   function sortData(songs, value) {
     if (value === 'toSortAsc') {
       document.querySelectorAll('.song').forEach(song => song.remove())
       for (let song of songs.sort((a, b) => a.index - b.index)) {
         songCreator(song);
       }
-      console.log('songs was sorted ascending')
+
     } else {
       document.querySelectorAll('.song').forEach(song => song.remove())
       for (let song of songs.sort((a, b) => b.index - a.index)) {
         songCreator(song);
       }
-      console.log('songs was sorted descending')
     }
     howToSort();
   }
@@ -143,18 +143,13 @@ function doStuffWithData(data) {
     const sortBtn = document.querySelector('.sortBtn');
     sortBtn.addEventListener('click', function sortBtnFunct() {
       sortBtn.removeEventListener('click', sortBtnFunct);
-      // console.log(`before ${sortBtn.classList}`);
       if (sortBtn.classList.contains('asc')) {
         sortBtn.classList.replace('asc', 'desc');
-        console.log('to sort Descending');
         sortData(songs, 'toSortDesc');
       } else {
         sortBtn.classList.replace('desc', 'asc');
-        console.log('to sort asc');
         sortData(songs, 'toSortAsc');
       }
-      console.log(sortBtn.classList);
-      // console.log(`after ${sortBtn.classList}`);
       setSongFunctionality();
     })
   }
@@ -165,7 +160,9 @@ function setSongFunctionality() {
   const songDiv = document.querySelectorAll('.song');
   songDiv.forEach(song => {
     song.addEventListener('click', () => {
+      titleViewer(song);
       stopActiveSongs()
+      document.querySelector('.btn-pause').querySelector('svg').classList.replace('fa-play', 'fa-pause')
       song.classList.toggle('active');
       audio = song.querySelector('audio');
       audio.play()
@@ -174,6 +171,7 @@ function setSongFunctionality() {
         });
     });
   });
+  bottomPauseButton()
 }
 
 function stopActiveSongs() {
@@ -189,18 +187,19 @@ function stopActiveSongs() {
 }
 
 function pauseFunctionality(song) {
-  const pauseBtn = song.querySelector('.pause')
+  const pauseBtn = song.querySelector('.pause');
+  const pauseBottomBtn = document.querySelector('.btn-pause');
   pauseBtn.addEventListener('click', function pauseHandler(e) {
     e.stopPropagation()
     const audio = song.querySelector('audio');
     if (audio.paused) {
       audio.play();
-      pauseBtn.querySelector('svg').classList.remove('fa-play');
-      pauseBtn.querySelector('svg').classList.add('fa-pause');
+      pauseBtn.querySelector('svg').classList.replace('fa-play', 'fa-pause');
+      pauseBottomBtn.querySelector('svg').classList.replace('fa-play', 'fa-pause');
     } else {
       audio.pause()
-      pauseBtn.querySelector('svg').classList.remove('fa-pause');
-      pauseBtn.querySelector('svg').classList.add('fa-play');
+      pauseBtn.querySelector('svg').classList.replace('fa-pause', 'fa-play');
+      pauseBottomBtn.querySelector('svg').classList.replace('fa-pause', 'fa-play');
     }
   })
 }
@@ -228,4 +227,67 @@ function generalPlayButton() {
       svg.classList.replace('fa-pause', 'fa-play');
     }
   })
+}
+
+function bottomPauseButton() {
+  const pauseBtn = document.querySelector('.btn-pause');
+  const prevBtn = document.querySelector('.btn-prev');
+  const nextBtn = document.querySelector('.btn-next');
+  pauseBtn.addEventListener('click', function doStuff() {
+    let currentSong = document.querySelector('.song.active');
+    if (currentSong === null) {
+      currentSong = document.querySelectorAll('.song')[0]
+      currentSong.click();
+    } else {
+      currentSong.querySelector('.pause').click();
+    }
+    console.log(currentSong);
+    const audio = currentSong.querySelector('audio');
+    if (audio.paused) {
+      pauseBtn.querySelector('svg').classList.replace('fa-pause', 'fa-play');
+    } else {
+      pauseBtn.querySelector('svg').classList.replace('fa-play', 'fa-pause');
+    }
+  })
+  prevBtn.addEventListener('click', () => moveSongPrev('-'));
+  nextBtn.addEventListener('click', () => moveSongPrev('+'));
+
+  function moveSongPrev(operation) {
+    const currentSong = document.querySelector('.song.active');
+    const allSongs = document.querySelectorAll('.song');
+    let indexCurrent = Array.from(allSongs).indexOf(currentSong);
+    console.log(operation);
+    switch (indexCurrent) {
+      case 0:
+        currentSong.click()
+        break;
+      default:
+        if (operation == '-') {
+          Array.from(allSongs)[indexCurrent - 1].click()
+        } else {
+          if (indexCurrent + 1 === allSongs.length) {
+            currentSong.click();
+          } else {
+            Array.from(allSongs)[indexCurrent + 1].click()
+          }
+          break;
+        }
+    }
+  }
+}
+function titleViewer(song) {
+  const songTitle = document.querySelector('.aboutSong .songTitle');
+  const singer = document.querySelector('.aboutSong .singer');
+  const image = document.querySelector('.songViewer img');
+  let singerToBe = song.querySelector('.singer').textContent;
+  if (singerToBe.indexOf('Ft') == -1) {
+    singer.textContent = singerToBe;
+  } else singer.textContent = getUsefulString(singerToBe);
+
+  function getUsefulString(string) {
+    string = string.split('').slice(0, string.indexOf('Ft')).join('').trim();
+    return string;
+  }
+  songTitle.textContent = song.getAttribute('data-short');
+  image.src = song.querySelector('img').src;
 }

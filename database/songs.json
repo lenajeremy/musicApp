@@ -3,6 +3,7 @@
     {
       "index": 1,
       "title": "Ariana Grande - no tears left to cry(Official Video).mp3",
+      "shortTitle": "No Tears Left to Cry",
       "singer": [
         "Ariana Grande"
       ],
@@ -14,6 +15,7 @@
     {
       "index": 2,
       "title": "Ariana Grande - raindrops (an angel cried) (Audio).mp3",
+      "shortTitle": "Ariana Grande - Raindrops",
       "singer": [
         "Ariana Grande"
       ],
@@ -25,6 +27,7 @@
     {
       "index": 3,
       "title": "Ariana Grande, Justin Bieber - Stuck with U.mp3",
+      "shortTitle": "Stuck With You",
       "singer": [
         "Ariana Grande",
         "Justin Bieber"
@@ -37,6 +40,7 @@
     {
       "index": 4,
       "title": "August Alsina - No Love ft. Nicki Minaj (Official Video).mp3",
+      "shortTitle": "August Alsina - No Love",
       "singer": [
         "August Alsina",
         "Nicki Minaj"
@@ -49,6 +53,7 @@
     {
       "index": 5,
       "title": "Burna Boy - Attention ft. Nicki Minaj (Official Video).mp3",
+      "shortTitle": "Attention - Burna Boy",
       "singer": [
         "Burna Boy",
         "Nicki Minaj"
@@ -61,6 +66,7 @@
     {
       "index": 6,
       "title": "Chike_-_Beautiful_People_illuminaija.com.mp3",
+      "shortTitle": "Beautiful People",
       "singer": [
         "Chike"
       ],
@@ -72,6 +78,7 @@
     {
       "index": 7,
       "title": "Chike-Ft-Ric-Hassani-Nakupenda-01.mp3",
+      "shortTitle": "Nakupenda",
       "singer": [
         "Chike",
         "Ric Hassani"
@@ -84,6 +91,7 @@
     {
       "index": 8,
       "title": "Chike-Ft-Zoro-Watching-over-Me.mp3",
+      "shortTitle": "Watching Over Me",
       "singer": [
         "Chike",
         "Zoro"
@@ -96,6 +104,7 @@
     {
       "index": 9,
       "title": "Chike-If-You-No-Love.mp3",
+      "shortTitle": "If You No Love",
       "singer": [
         "Chike"
       ],
@@ -107,6 +116,7 @@
     {
       "index": 10,
       "title": "Chike-Insecure.mp3",
+      "shortTitle": "Insecure",
       "singer": [
         "Chike"
       ],
@@ -118,6 +128,7 @@
     {
       "index": 11,
       "title": "Chike-Roju.mp3",
+      "shortTitle": "Roju",
       "singer": [
         "Chike"
       ],
@@ -129,6 +140,7 @@
     {
       "index": 12,
       "title": "Chike-Running.mp3",
+      "shortTitle": "Running",
       "singer": [
         "Chike"
       ],
@@ -140,6 +152,7 @@
     {
       "index": 12,
       "title": "Chris Brown - No Guidance (Official Video) ft. Drake.mp3",
+      "shortTitle": "No Guidance",
       "singer": [
         "Chris Brown",
         "Drake"
@@ -151,6 +164,7 @@
     {
       "index": 13,
       "title": "Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3",
+      "shortTitle": "We Plenti",
       "singer": [
         "Cobhams Asuquo",
         "Simi"
@@ -162,6 +176,7 @@
     {
       "index": 14,
       "title": "Davido x Nicki minaj - Freak of the week(official music video).mp3",
+      "shortTitle": "Freak of the Week",
       "singer": [
         "Davido",
         "Nicki Minaj"
@@ -173,6 +188,7 @@
     {
       "index": 15,
       "title": "Dj-Neptune-Nobody-ft.-Joeboy-Mr-Eazi.mp3",
+      "shortTitle": "Nobody",
       "singer": [
         "DJ Neptune",
         "Joeboy",
@@ -185,6 +201,7 @@
     {
       "index": 16,
       "title": "Ed Sheeran - Photograph (Official Music Video).mp3",
+      "shortTitle": "Photograph",
       "singer": [
         "Ed Sheeran"
       ],
@@ -195,6 +212,7 @@
     {
       "index": 17,
       "title": "Jerusalema-Remix-ft.-Burna-Boy-Nomcebo-Zikode",
+      "shortTitle": "Jerusalema Remix",
       "singer": [
         "Burna Boy",
         "Nomcebo",
@@ -207,6 +225,7 @@
     {
       "index": 18,
       "title": "Joeboy-Call-Official-Audio",
+      "shortTitle": "Call",
       "singer": [
         "Joeboy"
       ],
@@ -217,6 +236,7 @@
     {
       "index": 19,
       "title": "Jonathan-McReynolds-Make-Room-CEENAIJA.COM.mp3",
+      "shortTitle": "Make Room",
       "singer": [
         "Jonathan McReynolds"
       ],
@@ -227,6 +247,7 @@
     {
       "index": 20,
       "title": "Justin Bieber - Intentions ft. Quavo.mp3",
+      "shortTitle":"Intentions",
       "singer": [
         "Justin Bieber",
         "Quavo"
@@ -238,6 +259,7 @@
     {
       "index": 20,
       "title": "Know-You-ft.-Simi.mp3",
+      "shortTitle":"Know You",
       "singer": [
         "Ladipoe",
         "Simi"
@@ -249,6 +271,7 @@
     {
       "index": 21,
       "title": "L.A.X-Ft.-Simi-Tiwa-Savage-Gobe-Remix.mp3",
+      "shortTitle": "Gobe",
       "singer": [
         "L.A.X",
         "Simi",
@@ -261,6 +284,7 @@
     {
       "index": 22,
       "title": "Marvin-Sapp-Never-Would-Have-Made-It-GOSPELMINDS.mp3",
+      "shortTitle": "Never Would Have Made It",
       "singer": [
         "Marvin Sapp"
       ],

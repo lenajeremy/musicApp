@@ -1,12 +1,12 @@
 .library{
-  height: calc(100vh - 110px);
+  height: calc(100vh);
   position: relative;
   margin-top: 15px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   text-align: justify;
-  background-color:rgb(41, 37, 37);
-  border:3px solid gainsboro;
+  background: rgba(0, 0, 0, 0.9);
+  border:2px solid gainsboro;
 }
 .libraryHeader{
   position: sticky;
@@ -24,7 +24,8 @@
  background: url('assets/images/images\ \(11\).jpeg') center bottom;
   background-attachment: fixed;
   margin-top: 15px;
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 178px); */
+  height: calc(100vh - 230px);
   overflow: scroll;
 }
 .libraryHeader .shuffleXplay{
@@ -62,6 +63,7 @@ body{
   overflow: hidden;
   background: rgb(29, 28, 28);
   color: white;
+  height: 100vh;
 }
 .song{
   height: 70px;
@@ -81,28 +83,76 @@ body{
   border-radius: 50%;
   bottom: 0px;
   background: white;
-  color: rgb(3, 203, 253);
+  color: #ec293a;
+  transition: all 0.7s ease-in-out;
 }
 .song:not(.active) .pause{
   display: none;
 }
 .song.active{
-  color: black;
-  background: rgb(3, 203, 253);
+  background:#ec293a;
+  transition: all 0.3s ease-in-out;
 }
 .song .container{
   position: relative;
   display: flex;
   align-items: center;
 }
-.song .songTitle{
-  font-weight: 500;
+.songTitle{
+  font-weight: 600;
 }
 .thumbnail{
   margin-right: 20px;
 }
 .thumbnail img{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 7px;
+}
+/* Song Viewer */
+.songViewer{
+  background: linear-gradient(to left, blue, red);
+  width: calc(100% - 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 56px;
+  position: absolute;
+  bottom: 0;
+  padding: 4px;
+  border-radius: 10rem;
+}
+.songViewer .inner{
+  background-color: rgb(19, 18, 18);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10rem;
+  width: 100%;
+  height: 100%;
+}
+.songViewer .thumbnail img{
+  width: 35px;
+  height:35px;
+  border-radius: 50%;
+  display: block;
+}
+.songViewer .thumbnail{
+  box-sizing: content-box;
+  margin-left: 5px;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.songViewer .buttons{
+  display: flex;
+  margin-left: auto;
+  margin-right: 10px;
+  width: 25%;
+  justify-content: space-between;
+  align-items: center;
+}
+.songViewer .buttons .btn-pause{
+  font-size: 20px;
 }
