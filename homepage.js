@@ -47,7 +47,6 @@ function handleDirection(direction) {
 const plusButton = document.querySelector('.extras');
 const plusButtonValue = document.querySelector('.extrasValue');
 plusButton.addEventListener('click', () => {
-  // plusButtonValue.classList.toggle('active');
   makeActive(plusButtonValue);
 });
 
@@ -102,11 +101,15 @@ function songCreator(object) {
 }
 
 // Getting Data from the API
-fetch('database/songs.json')
-  .then(result => result.json().then(doStuffWithData))
-  .catch((err) => {
-    console.log(err)
-  });
+fromLocal();
+
+function fromLocal() {
+  fetch('database/songs.json')
+    .then(result => result.json().then(doStuffWithData))
+    .catch((err) => {
+      console.log(err)
+    });
+}
 
 function makeActive(object) {
   if (object.classList.contains('active')) {
@@ -275,6 +278,7 @@ function bottomPauseButton() {
     }
   }
 }
+
 function titleViewer(song) {
   const songTitle = document.querySelector('.aboutSong .songTitle');
   const singer = document.querySelector('.aboutSong .singer');
@@ -291,3 +295,99 @@ function titleViewer(song) {
   songTitle.textContent = song.getAttribute('data-short');
   image.src = song.querySelector('img').src;
 }
+
+document.querySelector('.form').addEventListener('submit', e => {
+  e.preventDefault();
+  if (e.currentTarget.querySelector('input').value != '') {
+    fetch('https://api.deezer.com/search?q=' + e.currentTarget.querySelector('input').value)
+      .then(data => data.json())
+      .then(data => recreateData(data))
+      .catch(err => console.log(err))
+  }
+})
+
+
+function recreateData(gotten) {
+  let {
+    data
+  } = gotten;
+  data = data.sort(a => a.title)
+  console.log(data)
+
+  function sortData(data, value) {
+    if (value === 'toSortAsc') {
+      document.querySelectorAll('.song').forEach(song => song.remove())
+      for (let song of data.sort((a, b) => a.index - b.index)) {
+        songRecreator(song);
+      }
+
+    } else {
+      document.querySelectorAll('.song').forEach(song => song.remove())
+      for (let song of data.sort((a, b) => b.index - a.index)) {
+        songRecreator(song);
+      }
+    }
+    howToSort();
+  }
+  sortData(data, 'toSortAsc')
+
+  function howToSort() {
+    const sortBtn = document.querySelector('.sortBtn');
+    sortBtn.addEventListener('click', function sortBtnFunct() {
+      sortBtn.removeEventListener('click', sortBtnFunct);
+      if (sortBtn.classList.contains('asc')) {
+        sortBtn.classList.replace('asc', 'desc');
+        sortData(data, 'toSortDesc');
+      } else {
+        sortBtn.classList.replace('desc', 'asc');
+        sortData(data, 'toSortAsc');
+      }
+      setSongFunctionality();
+    })
+  }
+  setSongFunctionality()
+}
+
+function songRecreator(object) {
+  const songDiv = document.createElement('div');
+  songDiv.className = 'song'
+  songDiv.setAttribute('data-short', object.title_short);
+  const container = document.createElement('div');
+  container.className = 'container';
+  const thumbnail = document.createElement('div');
+  thumbnail.className = 'thumbnail';
+  const imageThumbnail = document.createElement('img');
+  imageThumbnail.src = object.album.cover_small;
+  const title = document.createElement('div');
+  title.className = 'title';
+  const songTitle = document.createElement('h5');
+  songTitle.className = 'songTitle';
+  songTitle.textContent = object.title;
+  const small = document.createElement('small');
+  const singer = document.createElement('p');
+  singer.textContent = object.artist.name;
+
+  singer.className = 'singer';
+  const audio = document.createElement('audio');
+  const pause = document.createElement('div');
+  pause.className = 'pause';
+  const fontAwesome = document.createElement('i');
+  fontAwesome.className = 'fa fa-pause';
+  pause.appendChild(fontAwesome)
+  audio.src = object.preview;
+  small.appendChild(singer);
+  title.appendChild(songTitle);
+  title.appendChild(small);
+  thumbnail.appendChild(imageThumbnail);
+  container.appendChild(thumbnail);
+  container.appendChild(title);
+  container.appendChild(audio);
+  container.appendChild(pause)
+  songDiv.appendChild(container);
+  document.querySelector('.songArea').appendChild(songDiv);
+}
+const tabLinks = document.querySelectorAll('.tabLinks');
+tabLinks.forEach(link => link.addEventListener('click', () => {
+  tabLinks.forEach(tabLink => tabLink.classList.remove('active'))
+  link.classList.add('active')
+}))
