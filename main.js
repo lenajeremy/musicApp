@@ -128,7 +128,8 @@ function doStuffWithData(data) {
   function sortData(songs, value) {
     if (value === 'toSortAsc') {
       document.querySelectorAll('.song').forEach(song => song.remove())
-      for (let song of songs.sort((a, b) => a.index - b.index)) {
+      // for (let song of songs.sort((a, b) => a.index - b.index)) {
+      for(let song of songs.sort((a, b) => a.title - b.title)){
         songCreator(song);
       }
 
@@ -295,17 +296,28 @@ function titleViewer(song) {
   songTitle.textContent = song.getAttribute('data-short');
   image.src = song.querySelector('img').src;
 }
-
-document.querySelector('.form').addEventListener('submit', e => {
-  e.preventDefault();
-  if (e.currentTarget.querySelector('input').value != '') {
-    fetch('https://api.deezer.com/search?q=' + e.currentTarget.querySelector('input').value)
-      .then(data => data.json())
-      .then(data => recreateData(data))
-      .catch(err => console.log(err))
+document.querySelector('#song').addEventListener('input', (e) =>{
+  document.querySelector('.form').addEventListener('submit', e => e.preventDefault())
+  if(isOnline()){
+    if (document.querySelector('#song').value != '') {
+      fetch('https://api.deezer.com/search?q=' + document.querySelector('#song').value)
+        .then(data => data.json())
+        .then(data => recreateData(data))
+        .catch(err => console.log(err))
+    }
+  } else{
+    fetch('database/songs.json')
+      .then(result => result.json().then(data => filterData(data, e.target)))
+      .catch((err) => {
+        console.log(err)
+      }
+    );
   }
 })
-
+function filterData(data, field){
+  filteredDate = data.songs.filter(song => song.title.toLowerCase().indexOf(field.value.toLowerCase()) != -1);
+  doStuffWithData({songs: filteredDate})
+}
 
 function recreateData(gotten) {
   let {
@@ -347,7 +359,10 @@ function recreateData(gotten) {
   }
   setSongFunctionality()
 }
-
+function isOnline(){
+  value = document.querySelector('.tabLinks.active').textContent == 'Music' ?  true : false;
+  return value;
+}
 function songRecreator(object) {
   const songDiv = document.createElement('div');
   songDiv.className = 'song'

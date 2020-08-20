@@ -150,7 +150,7 @@
       "src": "assets/songs/Chike-Running.mp3"
     },
     {
-      "index": 12,
+      "index": 13,
       "title": "Chris Brown - No Guidance (Official Video) ft. Drake.mp3",
       "shortTitle": "No Guidance",
       "singer": [
@@ -162,7 +162,7 @@
       "src": "assets/songs/Chris Brown - No Guidance (Official Video) ft. Drake.mp3"
     },
     {
-      "index": 13,
+      "index": 14,
       "title": "Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3",
       "shortTitle": "We Plenti",
       "singer": [
@@ -174,7 +174,7 @@
       "src": "assets/songs/Cobhams-Asuquo-We-Plenti-ft.-Simi.mp3"
     },
     {
-      "index": 14,
+      "index": 15,
       "title": "Davido x Nicki minaj - Freak of the week(official music video).mp3",
       "shortTitle": "Freak of the Week",
       "singer": [
@@ -186,7 +186,7 @@
       "src": "assets/songs/Davido x Nicki minaj - Freak of the week(official music video).mp3"
     },
     {
-      "index": 15,
+      "index": 16,
       "title": "Dj-Neptune-Nobody-ft.-Joeboy-Mr-Eazi.mp3",
       "shortTitle": "Nobody",
       "singer": [
@@ -199,7 +199,7 @@
       "src": "assets/songs/Dj-Neptune-Nobody-ft.-Joeboy-Mr-Eazi.mp3"
     },
     {
-      "index": 16,
+      "index": 17,
       "title": "Ed Sheeran - Photograph (Official Music Video).mp3",
       "shortTitle": "Photograph",
       "singer": [
@@ -210,7 +210,7 @@
       "src": "assets/songs/Ed Sheeran - Photograph (Official Music Video).mp3"
     },
     {
-      "index": 17,
+      "index": 18,
       "title": "Jerusalema-Remix-ft.-Burna-Boy-Nomcebo-Zikode",
       "shortTitle": "Jerusalema Remix",
       "singer": [
@@ -223,7 +223,7 @@
       "src": "assets/songs/Jerusalema-Remix-ft.-Burna-Boy-Nomcebo-Zikode.mp3"
     },
     {
-      "index": 18,
+      "index": 19,
       "title": "Joeboy-Call-Official-Audio",
       "shortTitle": "Call",
       "singer": [
@@ -234,7 +234,7 @@
       "src": "assets/songs/Joeboy-Call-Official-Audio.mp3"
     },
     {
-      "index": 19,
+      "index": 20,
       "title": "Jonathan-McReynolds-Make-Room-CEENAIJA.COM.mp3",
       "shortTitle": "Make Room",
       "singer": [
@@ -245,7 +245,7 @@
       "src": "assets/songs/Jonathan-McReynolds-Make-Room-CEENAIJA.COM_.mp3"
     },
     {
-      "index": 20,
+      "index": 21,
       "title": "Justin Bieber - Intentions ft. Quavo.mp3",
       "shortTitle":"Intentions",
       "singer": [
@@ -257,7 +257,7 @@
       "src": "assets/songs/Justin Bieber - Intentions ft. Quavo.mp3"
     },
     {
-      "index": 20,
+      "index": 22,
       "title": "Know-You-ft.-Simi.mp3",
       "shortTitle":"Know You",
       "singer": [
@@ -269,7 +269,7 @@
       "src": "assets/songs/Know-You-ft.-Simi.mp3"
     },
     {
-      "index": 21,
+      "index": 23,
       "title": "L.A.X-Ft.-Simi-Tiwa-Savage-Gobe-Remix.mp3",
       "shortTitle": "Gobe",
       "singer": [
@@ -282,7 +282,7 @@
       "src": "assets/songs/L.A.X-Ft.-Simi-Tiwa-Savage-Gobe-Remix.mp3"
     },
     {
-      "index": 22,
+      "index": 24,
       "title": "Marvin-Sapp-Never-Would-Have-Made-It-GOSPELMINDS.mp3",
       "shortTitle": "Never Would Have Made It",
       "singer": [
@@ -291,6 +291,40 @@
       "year": 2020,
       "thumbnail": "assets/images/7.jpeg",
       "src": "assets/songs/Marvin-Sapp-Never-Would-Have-Made-It-GOSPELMINDS-.mp3"
+    },
+    {
+      "index":25,
+      "title":"Adekunle-Gold-Something-Different.mp3",
+      "thumbnail":"assets/images/7.jpeg",
+      "shortTitle": "Something Different",
+      "singer":[
+        "Adekunle Gold"
+      ],
+      "year":2020,
+      "src":"assets/songs/Adekunle-Gold-Something-Different.mp3"
+    },
+    {
+      "index": 26,
+      "title":"Mercy_Chinwo_-_Na_You_Dey_Reign.mp3",
+      "thumbnail":"assets/images/images (11).jpeg",
+      "shortTitle": "Na You Dey Reign",
+      "singer": [
+        "Mercy Chinwo"
+      ],
+      "year":2020,
+      "src":"assets/songs/Mercy_Chinwo_-_Na_You_Dey_Reign_(Jesusful.com).mp3"
+    },
+    {
+      "index": 27,
+      "title":"Promises",
+      "thumbnail":"assets/images/5.jpeg",
+      "shortTitle": "Promises",
+      "singer": [
+        "Joe Barnes",
+        "Naomi Raines"
+      ],
+      "year":2020,
+      "src":"assets/songs/Maverick_City_Ft_Joe_L_Barnes_Naomi_Raines_-_Promises.mp3"
     }
   ]
 }
